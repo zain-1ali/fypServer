@@ -8,7 +8,7 @@ const userAuth = async (req, res, next) => {
     if (!authHeader) {
       res.status(401).send({
         status: false,
-        msg: "Auth Failed",
+        msg: "Auth Failed1",
       });
     }
     const token = authHeader.split(" ")[1];
@@ -26,7 +26,7 @@ const userAuth = async (req, res, next) => {
     // next(new ErrorHandler("Auth Failed", 401));
     res.status(401).send({
       status: false,
-      msg: "Auth Failed",
+      msg: "Auth Failed2",
     });
     console.log(error);
   }

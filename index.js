@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import authroutes from "./routes/authRoutes.js";
 import profileroutes from "./routes/ProfileRoutes.js";
 import TributeRoutes from "./routes/TributeRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 import http from "http";
 import { Server } from "socket.io";
 import { setupSocket } from "./sockets.js";
@@ -22,6 +23,10 @@ app.use(express.json());
 
 // -----------------------------------------------Auth routes-------------------------------------------------
 app.use("/api/auth/", authroutes);
+
+// -----------------------------------------------user routes--------------------------------------------------
+app.use("/api/user/", userRoutes);
+
 // -----------------------------------------------profile routes------------------------------------------------
 app.use("/api/Profile/", profileroutes);
 // -----------------------------------------------tributes routes--------------------------------------------------
